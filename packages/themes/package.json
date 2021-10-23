@@ -1,9 +1,9 @@
 {
   "name": "@pagerland/themes",
   "version": "1.0.0",
-  "description": "Pagerland Team",
+  "description": "Laboratorio odontotecnico, Offriamo una vasta gamma di tecnologie mantenendo anche le classiche lavorazioni",
   "main": "src/index.js",
-  "author": "Pagerland Team",
+  "author": "brtsml",
   "license": "MIT",
   "private": true,
   "dependencies": {

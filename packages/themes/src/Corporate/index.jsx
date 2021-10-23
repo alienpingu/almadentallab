@@ -45,7 +45,7 @@ const Theme = ({ children }) => {
             </p>
             <Box flexBox alignItems="center">
               <Switch checked={darkMode.value} mr={3} onToggle={darkMode.toggle} />
-              <span>Or you can switch it here</span>
+              <span>O scegli tu</span>
             </Box>
           </div>
         )}

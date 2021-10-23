@@ -11,7 +11,7 @@ import ArrowRight from '@pagerland/icons/src/line/ArrowRight';
 import Link from 'next/link'
 import data from '../../data';
 
-const Mission = ({
+const Bio = ({
   name,
   title,
   subtitle,
@@ -27,6 +27,8 @@ const Mission = ({
   TitleProps,
   TextProps,
   CtaProps,
+  VideoWrapper,
+  VideoTitle
 }) => (
   <Box name={name} {...WrapperProps}>
     <Container {...ContainerProps}>
@@ -40,18 +42,32 @@ const Mission = ({
           <Typography {...SubtitleProps}>{subtitle}</Typography>
           <Typography {...TitleProps}>{title}</Typography>
           <Typography {...TextProps}>{text}</Typography>
-          <Link href="/tech">
-
-            <Button {...CtaProps} {...cta}/>
-            
-          </Link>
         </Fade>
       </Box>
+    </Container>
+    <Container {...VideoWrapper}>
+      <Typography {...TitleProps}>Guarda l'intervista</Typography>
+        <iframe 
+          src="https://player.vimeo.com/video/638058551?h=008eee6285&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+          frameborder="0" 
+          allow="autoplay; fullscreen; picture-in-picture" 
+          allowfullscreen  
+          title="VID-20211006-WA0009.mp4"
+          style={{
+            position:'flex',
+            width: '100%',
+            height: '100%',
+            marginTop:'64px',
+            minHeight: '50vh'
+
+          }}
+          ></iframe>
+      <script src="https://player.vimeo.com/api/player.js"></script>
     </Container>
   </Box>
 );
 
-Mission.propTypes = {
+Bio.propTypes = {
   name: PropTypes.string.isRequired,
   WrapperProps: PropTypes.object,
   ContainerProps: PropTypes.object,
@@ -68,9 +84,11 @@ Mission.propTypes = {
   title: PropTypes.node,
   text: PropTypes.node,
   cta: PropTypes.object,
+  VideoWrapper: PropTypes.object,
+  VideoTitle: PropTypes.node,
 };
 
-Mission.defaultProps = {
+Bio.defaultProps = {
   WrapperProps: {
     py: {
       _: 56,
@@ -84,7 +102,7 @@ Mission.defaultProps = {
     alignItems: 'center',
     flexDirection: {
       _: 'column',
-      lg: 'row-reverse',
+      lg: 'row',
     },
   },
   ImageProps: {
@@ -116,12 +134,15 @@ Mission.defaultProps = {
       lg: 48,
     },
   },
-  CtaProps: {
-    variant: 'link',
-    color: 'invert',
-    icon: ArrowRight,
+  VideoWrapper: {
+    py: {
+      _: 56,
+      md: 64,
+      lg: 96,
+    },
+  VideoTitle: 'Lorem Ipsum',
   },
-  ...data.mission,
+  ...data.bio,
 };
 
-export default Mission;
+export default Bio;

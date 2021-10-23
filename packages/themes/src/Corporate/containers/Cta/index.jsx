@@ -21,7 +21,8 @@ const Cta = ({
   TitleProps,
   TextProps,
   ButtonsWrapperProps,
-  ButtonProps,
+  ButtonPropsEmail,
+  ButtonPropsWhatsapp,
   LiquidProps,
   title,
   text,
@@ -41,11 +42,12 @@ const Cta = ({
             <Typography {...TitleProps}>{title}</Typography>
             <Typography {...TextProps}>{text}</Typography>
             <Box {...ButtonsWrapperProps}>
-              {buttons.map(({ label, ...button }, key) => (
-                <Button key={key} {...ButtonProps} {...button}>
-                  {label}
+                <Button {...ButtonPropsEmail} {...buttons[0]}>
+                  {buttons[0].label}
                 </Button>
-              ))}
+                <Button {...ButtonPropsWhatsapp} {...buttons[1]}>
+                  {buttons[1].label}
+                </Button>
             </Box>
           </Fade>
         </Box>
@@ -65,7 +67,8 @@ Cta.propTypes = {
   TitleProps: PropTypes.object,
   TextProps: PropTypes.object,
   ButtonsWrapperProps: PropTypes.object,
-  ButtonProps: PropTypes.object,
+  ButtonPropsEmail: PropTypes.object,
+  ButtonPropsWhatsapp: PropTypes.object,
   title: PropTypes.node,
   subtitle: PropTypes.node,
   text: PropTypes.node,
@@ -124,8 +127,13 @@ Cta.defaultProps = {
     flexBox: true,
     justifyContent: 'center',
   },
-  ButtonProps: {
+  ButtonPropsEmail: {
     variant: 'brand',
+    size: 'huge',
+    as: 'a',
+  },
+  ButtonPropsWhatsapp: {
+    variant: 'outline',
     size: 'huge',
     as: 'a',
   },

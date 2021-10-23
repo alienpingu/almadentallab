@@ -5,28 +5,16 @@ import Goals from './assets/our-goals.png';
 import Goals2x from './assets/our-goals@2x.png';
 import Mission from './assets/our-mission.png';
 import Mission2x from './assets/our-mission@2x.png';
-import Team from './assets/team.png';
-import Team2x from './assets/team@2x.png';
+import Tech1 from './assets/tech-1.png';
+import Tech2 from './assets/tech-2.jpg';
+import Tech3 from './assets/tech-3.png';
+import Tech4 from './assets/tech-4.jpg';
+import Bio from './assets/bio-1.png';
+
 
 import Consulting from './assets/consulting.svg';
 import Auditing from './assets/auditing.svg';
 import Strategy from './assets/strategy.svg';
-import Avatar1 from './assets/avatars/avatar-1.jpg';
-import Avatar12x from './assets/avatars/avatar-1@2x.jpg';
-import Avatar2 from './assets/avatars/avatar-2.jpg';
-import Avatar22x from './assets/avatars/avatar-2@2x.jpg';
-import Avatar3 from './assets/avatars/avatar-3.jpg';
-import Avatar32x from './assets/avatars/avatar-3@2x.jpg';
-import Avatar4 from './assets/avatars/avatar-4.jpg';
-import Avatar42x from './assets/avatars/avatar-4@2x.jpg';
-import Avatar5 from './assets/avatars/avatar-5.jpg';
-import Avatar52x from './assets/avatars/avatar-5@2x.jpg';
-import Avatar6 from './assets/avatars/avatar-6.jpg';
-import Avatar62x from './assets/avatars/avatar-6@2x.jpg';
-import Avatar7 from './assets/avatars/avatar-7.jpg';
-import Avatar72x from './assets/avatars/avatar-7@2x.jpg';
-import Avatar8 from './assets/avatars/avatar-8.jpg';
-import Avatar82x from './assets/avatars/avatar-8@2x.jpg';
 
 export default {
   title: 'Almadental',
@@ -48,10 +36,10 @@ export default {
       //   to: 'team',
       //   label: 'Team',
       // },
-      {
-        to: 'testimonials',
-        label: 'Recensioni',
-      },
+      // {
+      //   to: 'testimonials',
+      //   label: 'Recensioni',
+      // },
       // {
       //   to: 'pricing',
       //   label: 'Pricing',
@@ -64,9 +52,8 @@ export default {
     actions: [
       {
         href:
-          'tel:34768486554',
+          'tel:3498229508',
         label: 'Chiama',
-        target: '_blank',
       },
     ],
   },
@@ -79,14 +66,13 @@ export default {
     title: 'Almadental',
     subtitle: 'Laboratorio',
     description:
-      'Offriamo una vasta gamma di tecnologie mantenendo anche le classiche lavorazioni',
+      'Classiche lavorazioni e tecnologie innovative',
     actions: [
       {
         as: 'a',
         href:
-          '/',
+          'tel:3498229508',
         children: 'Chiama',
-        target: '_blank',
       },
       {
         to: 'offer',
@@ -148,10 +134,10 @@ export default {
     text:
       'Il laboratorio almadental offre una vasta gamma di tecnologia e materiali clicamente convalidati che ci consentono di sfruttare avanzati flussi di lavoro digitali. Capaci di fornire ai clienti indicazioni precise con velocità ed efficienza, mantenendo al suo interno anche le classiche lavorazioni del laboratorio odontotecnico',
     cta: {
-      children: 'Read about our mission',
+      children: 'Scopri di più',
       href:
-        'https://themeforest.net/item/pagerland-react-and-gatsby-landing-page-templates/26548567',
-      target: '_blank',
+        '/bio',
+      // target: '_blank',
       as: 'a',
     },
   },
@@ -166,13 +152,13 @@ export default {
     cta: {
       children: 'Vedi tutte le tecnologie',
       href:
-        'https://themeforest.net/item/pagerland-react-and-gatsby-landing-page-templates/26548567',
-      target: '_blank',
+        '/tech',
+      // target: '_blank',
       as: 'a',
     },
   },
   supportCta: {
-    subtitle: 'Sei un professionista',
+    subtitle: 'Sei un dentista?',
     title: 'Contattaci subito!',
     text:
       'Almadental collabora con molti studi dentistici, piccole e grandi realtà si rivolgono a noi per le tecnologie, la velocità e la professionalità che disponiamo. Unisciti a noi.',
@@ -182,89 +168,132 @@ export default {
         href: 'to:almadentale@katamail.com',
         target: '_blank',
       },
+      {
+        label: 'WhatsApp',
+        href: 'http://wa.me/393498229508',
+        target: '_blank',
+      },
     ],
   },
   team: {
-    img: {
-      src: Team,
-      srcSet: `${Team} 1x, ${Team2x} 2x`,
+    techArray: [
+    {
+      img: {
+        src: Tech1,
+        srcSet: `${Tech1} 1x`,
+      },
+      // subtitle: 'Our biggest value are people',
+      title: 'Fresatore VHF S1',
+      text:
+        'Fresatore da tavolo a controllo numerico a cinque assi interpolati in continuo, in grado di fresare sia protesi cementate che avvitate (corone, ponti, intarsi, faccette) nei seguenti materiali: zirconia, PMMA, composito, cromo edisilicato. Fresa sia a secco che a umido a seconda della durezza del materiale utilizzato',
     },
-    subtitle: 'Our biggest value are people',
-    title: 'Meet our great team',
-    text:
-      'Proin sed pharetra ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam commodo eu justo in posuere. Sed elementum, ipsum eu faucibus porta, odio mauris posuere quam, eu cursus tellus est et lacus.',
-    cta: {
-      label: 'Join us, we’re hiring!',
-      href:
-        'https://themeforest.net/item/pagerland-react-and-gatsby-landing-page-templates/26548567',
+    {
+      img: {
+        src: Tech2,
+        srcSet: `${Tech2} 1x`,
+      },
+      // subtitle: 'Our biggest value are people',
+      title: 'Fresatore DentalPlus per titanio',
+      text:
+        'Fresatore a controllo numerico a cinque assi interpolati in continuo per realizzare fori inclinati. Può fresare qualsiasi tipo di protesi, sia cementate che avvitate (corone, aubutments, ponti, ponti avvitati, attacchi, intarsi, faccette) nei seguenti materiali: cera, PMMA, altre resine, composito, ossido di zirconio, disilicato di litio, cromo-cobalto, titanio. Fresa sia a secco che a umido a seconda della durezza del materiale utilizzato',
     },
-    people: [
-      {
-        avatar: {
-          src: Avatar1,
-          srcSet: `${Avatar1} 1x, ${Avatar12x} 2x`,
-        },
-        name: 'Timothy Wilson',
-        position: 'Co-Founder, CEO',
+    {
+      img: {
+        src: Tech3,
+        srcSet: `${Tech3} 1x`,
       },
-      {
-        avatar: {
-          src: Avatar2,
-          srcSet: `${Avatar2} 1x, ${Avatar22x} 2x`,
-        },
-        name: 'Bernard Nguyen',
-        position: 'Co-Founder, CEO',
+      // subtitle: 'Our biggest value are people',
+      title: '3Shape Scanner',
+      text:
+        'Scanner intraorale utilizzato per rilevare le impronte dentali digitali sostituendo i tradizionali materiali da impronta come alginato e silicone.',
+    },
+    {
+      img: {
+        src: Tech4,
+        srcSet: `${Tech4} 1x`,
       },
-      {
-        avatar: {
-          src: Avatar3,
-          srcSet: `${Avatar3} 1x, ${Avatar32x} 2x`,
-        },
-        name: 'Bessie Richards',
-        position: 'Co-Founder, CEO',
-      },
-      {
-        avatar: {
-          src: Avatar4,
-          srcSet: `${Avatar4} 1x, ${Avatar42x} 2x`,
-        },
-        name: 'Judith Black',
-        position: 'Co-Founder, CEO',
-      },
-      {
-        avatar: {
-          src: Avatar5,
-          srcSet: `${Avatar5} 1x, ${Avatar52x} 2x`,
-        },
-        name: 'Robert Edwards',
-        position: 'Co-Founder, CEO',
-      },
-      {
-        avatar: {
-          src: Avatar6,
-          srcSet: `${Avatar6} 1x, ${Avatar62x} 2x`,
-        },
-        name: 'Dianne Robertson',
-        position: 'Co-Founder, CEO',
-      },
-      {
-        avatar: {
-          src: Avatar7,
-          srcSet: `${Avatar7} 1x, ${Avatar72x} 2x`,
-        },
-        name: 'Shane Black',
-        position: 'Co-Founder, CEO',
-      },
-      {
-        avatar: {
-          src: Avatar8,
-          srcSet: `${Avatar8} 1x, ${Avatar82x} 2x`,
-        },
-        name: 'Nathan Fox',
-        position: 'Co-Founder, CEO',
-      },
-    ],
+      subtitle: 'Stampante dentale 3D ',
+      title: 'Form3',
+      text:
+        "Dall' impronta rilevata dallo scanner intraorale questa stampante prototipa modelli 3D provvisori, bite e mascherine di ogni genere.",
+    }
+  ],
+    // people: [
+    //   {
+    //     avatar: {
+    //       src: Avatar1,
+    //       srcSet: `${Avatar1} 1x, ${Avatar12x} 2x`,
+    //     },
+    //     name: 'Timothy Wilson',
+    //     position: 'Co-Founder, CEO',
+    //   },
+    //   {
+    //     avatar: {
+    //       src: Avatar2,
+    //       srcSet: `${Avatar2} 1x, ${Avatar22x} 2x`,
+    //     },
+    //     name: 'Bernard Nguyen',
+    //     position: 'Co-Founder, CEO',
+    //   },
+    //   {
+    //     avatar: {
+    //       src: Avatar3,
+    //       srcSet: `${Avatar3} 1x, ${Avatar32x} 2x`,
+    //     },
+    //     name: 'Bessie Richards',
+    //     position: 'Co-Founder, CEO',
+    //   },
+    //   {
+    //     avatar: {
+    //       src: Avatar4,
+    //       srcSet: `${Avatar4} 1x, ${Avatar42x} 2x`,
+    //     },
+    //     name: 'Judith Black',
+    //     position: 'Co-Founder, CEO',
+    //   },
+    //   {
+    //     avatar: {
+    //       src: Avatar5,
+    //       srcSet: `${Avatar5} 1x, ${Avatar52x} 2x`,
+    //     },
+    //     name: 'Robert Edwards',
+    //     position: 'Co-Founder, CEO',
+    //   },
+    //   {
+    //     avatar: {
+    //       src: Avatar6,
+    //       srcSet: `${Avatar6} 1x, ${Avatar62x} 2x`,
+    //     },
+    //     name: 'Dianne Robertson',
+    //     position: 'Co-Founder, CEO',
+    //   },
+    //   {
+    //     avatar: {
+    //       src: Avatar7,
+    //       srcSet: `${Avatar7} 1x, ${Avatar72x} 2x`,
+    //     },
+    //     name: 'Shane Black',
+    //     position: 'Co-Founder, CEO',
+    //   },
+    //   {
+    //     avatar: {
+    //       src: Avatar8,
+    //       srcSet: `${Avatar8} 1x, ${Avatar82x} 2x`,
+    //     },
+    //     name: 'Nathan Fox',
+    //     position: 'Co-Founder, CEO',
+    //   },
+    // ],
   },
+  bio: {
+    img: {
+      src: Bio,
+      srcSet: `${Bio} 1x`,
+    },
+    subtitle: 'Laboratorio odontotecnico',
+    title: 'Almadental',
+    text:textToMultiline`Almadental laboratorio odontotecnico nasce nel Gennaio del 2015, venne fondato dal professionista odontotecnico Macaluso Alessandro;\n\nDopo più di vent’anni di esperienza nel settore decise di unire le capacità manuali tradizionali di un laboratorio odontotecnico con le tecnologie di un vero e proprio centro fresaggio. Assicurando alla clientela un prodotto finale di ottima qualità e curato in ogni dettaglio`,
+    },
   testimonials: {
     subtitle: 'Our customer reviews',
     title: 'Testimonials',

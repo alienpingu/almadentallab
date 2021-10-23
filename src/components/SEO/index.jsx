@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Head from 'next/head';
 
 function Index({ description, meta, title }) {
-  const formattedTitle = `${title} | Pagerland Next`;
+  const formattedTitle = `${title}`;
 
   return (
     <Head>
@@ -13,7 +13,7 @@ function Index({ description, meta, title }) {
       <meta name="og:description" content={description} />
       <meta name="og:type" content="website" />
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:creator" content="Pagerland Team" />
+      <meta name="twitter:creator" content="brtsml" />
       <meta name="twitter:title" content={formattedTitle} />
       <meta name="twitter:description" content={description} />
       {meta.map(({ name, content }) => (
@@ -25,7 +25,7 @@ function Index({ description, meta, title }) {
 
 Index.defaultProps = {
   meta: [],
-  description: ``,
+  description: `Almadental Laboratorio - Il laboratorio almadental offre una vasta gamma di tecnologia`,
 };
 
 Index.propTypes = {

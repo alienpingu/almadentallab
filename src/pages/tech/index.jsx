@@ -3,28 +3,29 @@ import PropTypes from 'prop-types';
 
 import Head from 'next/head';
 import absoluteUrl from 'next-absolute-url';
-
+import Link from 'next/link'
 import Theme, { theme } from '@pagerland/themes/src/Corporate';
 import {
   Navbar,
-  Welcome,
-  Offer,
-  Goals,
-  Mission,
-  Cta,
+  // Welcome,
+  // Offer,
+  // Goals,
+  // Mission,
+  // Cta,
   Team,
-  Testimonials,
+  // Testimonials,
   // Pricing,
-  Copyright,
+  // Copyright,
   // Newsletter,
   Contact,
 } from '@pagerland/themes/src/Corporate/containers';
-
 import data from '@pagerland/themes/src/Corporate/data';
 
 import preview from '@pagerland/themes/src/Corporate/assets/preview.jpg';
+import Logo from '@pagerland/themes/src/Corporate/components/Logo';
 
-import SEO from '../components/SEO';
+
+import SEO from '../../components/SEO';
 
 const Corporate = ({ url }) => (
   <Theme>
@@ -34,19 +35,24 @@ const Corporate = ({ url }) => (
       <meta property="og:image" content={`${url}${preview}`} />
     </Head>
     <SEO title="Almadental" />
-    <Navbar />
-    <Welcome name="" />
-    <Offer name="offer" />
-    <Goals name="goals" />
-    <Mission name="mission" />
-    <Cta name="cta" {...data.supportCta} />
-    {/*<Team name="team" />*/}
+    <div className="m-5">
+      <Link  href="/">
+        <Logo /> 
+      </Link>
+    </div>
+    {/*<Navbar />*/}
+    {/*<Welcome name="" />*/}
+    {/*<Offer name="offer" />*/}
+    {/*<Goals name="goals" />*/}
+    {/*<Mission name="mission" />*/}
+    {/*<Cta name="cta" {...data.supportCta} />*/}
+    <Team name="team" />
     {/*<Testimonials name="testimonials" />*/}
     {/*<Cta name="cta" {...data.contactCta} />*/}
     {/*<Pricing name="pricing" />*/}
     <Contact name="contact" />
     {/*<Newsletter name="newsletter" />*/}
-    <Copyright />
+    {/*<Copyright />*/}
   </Theme>
 );
 

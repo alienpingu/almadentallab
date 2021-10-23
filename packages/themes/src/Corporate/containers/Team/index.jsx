@@ -15,12 +15,13 @@ import data from '../../data';
 
 const Team = ({
   name,
-  subtitle,
-  title,
-  img,
-  text,
-  cta,
-  people,
+  // subtitle,
+  // title,
+  // img,
+  // text,
+  // cta,
+  // people,
+  techArray,
   WrapperProps,
   ContainerProps,
   CaptionProps,
@@ -39,37 +40,35 @@ const Team = ({
 }) => (
   <Box name={name} {...WrapperProps}>
     <Container {...ContainerProps}>
-      <Grid {...TemplateProps}>
+      {techArray.map((e, i) => <Grid {...TemplateProps}>
         <Box {...ImageWrapperProps}>
           <Fade cascade duration={600}>
-            <Img {...ImageProps} {...img} />
+            <Img {...ImageProps} {...e.img} />
           </Fade>
         </Box>
         <Box {...CaptionProps}>
           <Fade bottom cascade duration={600}>
-            <Typography {...SubtitleProps}>{subtitle}</Typography>
-            <Typography {...TitleProps}>{title}</Typography>
-            <Typography {...TextProps}>{text}</Typography>
-            <Button {...CtaProps} {...cta}>
-              {cta.label}
-            </Button>
+            <Typography {...SubtitleProps}>{e.subtitle}</Typography>
+            <Typography {...TitleProps}>{e.title}</Typography>
+            <Typography {...TextProps}>{e.text}</Typography>
           </Fade>
         </Box>
-        {/*<Grid {...GridProps}>
-          {people.map((person, key) => (
-            <Fade key={key} bottom cascade duration={600} delay={key * 100}>
-              <Box {...PersonWrapperProps}>
-                <Avatar {...AvatarProps} {...person.avatar} />
-                <Typography {...NameProps}>{person.name}</Typography>
-                <Typography {...PositionProps}>{person.position}</Typography>
-              </Box>
-            </Fade>
-          ))}
-        </Grid>*/}
-      </Grid>
+      </Grid>)}
     </Container>
   </Box>
 );
+
+{/* <Grid {...GridProps}>
+  {people.map((person, key) => (
+    <Fade key={key} bottom cascade duration={600} delay={key * 100}>
+      <Box {...PersonWrapperProps}>
+        <Avatar {...AvatarProps} {...person.avatar} />
+        <Typography {...NameProps}>{person.name}</Typography>
+        <Typography {...PositionProps}>{person.position}</Typography>
+      </Box>
+    </Fade>
+  ))}
+</Grid>*/}
 
 Team.propTypes = {
   name: PropTypes.string.isRequired,

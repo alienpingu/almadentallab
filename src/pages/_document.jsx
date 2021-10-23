@@ -16,9 +16,9 @@ export default class MyDocument extends Document {
       <html lang="en">
         <Head>
           {this.props.styleTags}
-          <link rel="icon" href="/icons/icon-48x48.png?v=fe808657b067201fdd8e22e0c3a39714" />
           <link rel="manifest" href="/manifest.webmanifest" />
           <meta name="theme-color" content="#189AB4" />
+          <link rel="icon" type="image/png" href="/next/icons/icon-48x48.png" />
           <link rel="apple-touch-icon" sizes="48x48" href="/next/icons/icon-48x48.png" />
           <link rel="apple-touch-icon" sizes="72x72" href="/next/icons/icon-72x72.png" />
           <link rel="apple-touch-icon" sizes="96x96" href="/next/icons/icon-96x96.png" />
